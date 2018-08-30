@@ -1,0 +1,21 @@
+spring:
+    profiles:
+        active: dev
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: false # we use gulp + BrowserSync for livereload
+    jackson:
+        serialization.indent_output: true
+    data:
+       elasticsearch:
+         cluster-nodes: localhost:9300
+         clusterName: elasticsearch
+
+       mongodb:
+            uri: mongodb://47.101.36.139:27017
+            database: pangolin_common_db_test
+
+server:
+  port: 8088
